@@ -1,0 +1,17 @@
+{
+    "name": "nick/email-syncer",
+    "description": "Syncs emails from the registration system to Mailerlite",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Nicholas Anderson",
+            "email": "nicholas@hey.blue"
+        }
+    ],
+    "require": {
+        "mailerlite/mailerlite-api-v2-php-sdk": "^0.3.2",
+        "php-http/guzzle6-adapter": "^2.0",
+        "mongodb/mongodb": "^1.11"
+    }
+}
