@@ -1,11 +1,11 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-include 'variables.php';
+// include 'variables.php';
 
-// $bearer = getenv('BEARER');
-// $url = getenv('URL');
-// $dburl = getenv('DBURL');
-// $mlapi = getenv('MLAPI');
+$bearer = getenv('BEARER');
+$url = getenv('URL');
+$dburl = getenv('DBURL');
+$mlapi = getenv('MLAPI');
 
 date_default_timezone_set("America/New_York");
 
