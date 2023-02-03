@@ -1,11 +1,13 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-// include 'variables.php';
+include 'variables.php';
 
-$bearer = getenv('BEARER');
-$url = getenv('URL');
-$dburl = getenv('DBURL');
-$mlapi = getenv('MLAPI');
+// $bearer = getenv('BEARER');
+// $url = getenv('URL');
+// $dburl = getenv('DBURL');
+// $mlapi = getenv('MLAPI');
+
+set_time_limit(0);
 
 date_default_timezone_set("America/New_York");
 
@@ -94,7 +96,7 @@ $collection2 = (new MongoDB\Client(
 
     $insert = $collection2->insertOne($addedSubscriber);
 
-sleep(10);
+sleep(2);
 
 }
 
