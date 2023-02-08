@@ -1,13 +1,18 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
-include 'variables.php';
+declare(strict_types=1);
 
-// $bearer = getenv('BEARER');
-// $url = getenv('URL');
-// $dburl = getenv('DBURL');
-// $mlapi = getenv('MLAPI');
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
+$bearer = $_ENV['BEARER'];
+$url = $_ENV['URL'];
+$dburl = $_ENV['DBURL'];
+$mlapi = $_ENV['MLAPI'];
 
 set_time_limit(0);
+ignore_user_abort(TRUE);
 
 date_default_timezone_set("America/New_York");
 
