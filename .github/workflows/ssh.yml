@@ -18,7 +18,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@7c0b4c8c8ebed23eca9ec2802474895d105b11bc
         with:
-          php-version: ${{ env.PHP_VERSION }}
+          php-version: ${{ vars.PHP_VERSION }}
 
       - name: Check if composer.json exists
         id: check_files
@@ -71,7 +71,7 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
-          port: ${{ env.PORT }}
+          port: ${{ vars.PORT }}
           connect_timeout: 30s
           scp: |
             './upload/*' => /opt/bitnami/apache/htdocs
