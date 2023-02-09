@@ -137,7 +137,7 @@ foreach ($find as $member) {
         'bsa_id' => $member['bsaID'],
         'dues_year' => $member['duesYear'],
         'chapter' => $member['chapter'],
-        'level' => $member['obv']
+        'level' => $member['obv'],
       ]
     ];
 
@@ -151,7 +151,7 @@ foreach ($find as $member) {
     $log = $client->putLogEvents([
       'logEvents' => [
           [
-              'message' => $addedSubscriber,
+              'message' => implode(" ", json_decode($addedSubscriber)),
               'timestamp' => round(microtime(true) * 1000),
           ],
       ],
